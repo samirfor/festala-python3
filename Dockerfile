@@ -1,4 +1,4 @@
-FROM samirfor/csvdedupe-docker
+FROM samirfor/csvdedupe-docker:samirfor-fork
 
 RUN set -ex \
         && apk add --no-cache --virtual .build_scrapy_deps \
