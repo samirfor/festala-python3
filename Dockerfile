@@ -8,7 +8,7 @@ RUN set -ex \
                 libxslt-dev
 
 RUN set -ex \
-        && ${PIP_INSTALL} pyrebase \
+        && ${PIP_INSTALL} pyrebase
 
 RUN set -ex \
         && ${PIP_INSTALL} scrapy \
