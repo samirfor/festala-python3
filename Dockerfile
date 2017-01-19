@@ -2,7 +2,8 @@ FROM samirfor/csvdedupe-docker
 
 RUN set -ex \
         && apk add --no-cache --virtual .build-deps \
-                libxml2-dev
+                libxml2-dev \
+                libxslt-dev
 
 RUN set -ex \
         && ${PIP_INSTALL} pyrebase \
