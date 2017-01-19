@@ -5,7 +5,12 @@ RUN set -ex \
                 openssl-dev \
                 libffi-dev \
                 libxml2-dev \
-                libxslt-dev
+                libxslt-dev \
+        && apk add --no-cache --virtual .run_scrapy_deps \
+                openssl \
+                libffi \
+                libxml2 \
+                libxslt
 
 RUN set -ex \
         && ${PIP_INSTALL} pyrebase
