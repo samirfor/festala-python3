@@ -19,4 +19,7 @@ RUN set -ex \
         && ${PIP_INSTALL} scrapy \
         && apk del .build_scrapy_deps
 
+RUN set -ex \
+        && ${PIP_INSTALL} git+https://github.com/simonacca/TelegramLogHandler
+
 ENTRYPOINT ["/bin/sh"]
