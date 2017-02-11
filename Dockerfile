@@ -13,7 +13,7 @@ RUN set -ex \
                 libxslt
 
 RUN set -ex \
-        && ${PIP_INSTALL} pyrebase
+        && ${PIP_INSTALL} pyrebase python-telegram-handler
 
 RUN set -ex \
         && ${PIP_INSTALL} scrapy \
