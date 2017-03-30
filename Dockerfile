@@ -15,8 +15,10 @@ RUN set -ex \
 RUN set -ex \
         && ${PIP_INSTALL} pyrebase
 
+ENV SCRAPY_VERSION="1.3.3"
+
 RUN set -ex \
-        && ${PIP_INSTALL} scrapy \
+        && ${PIP_INSTALL} scrapy==${SCRAPY_VERSION} \
         && apk del .build_scrapy_deps
 
 ENTRYPOINT ["/bin/sh"]
