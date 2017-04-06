@@ -13,7 +13,7 @@ RUN set -ex \
                 libxslt
 
 RUN set -ex \
-        && ${PIP_INSTALL} python-telegram-handler pyrebase
+        && ${PIP_INSTALL} python-telegram-handler pymongo
 
 ENV SCRAPY_VERSION="1.3.3"
 
