@@ -22,9 +22,17 @@ RUN set -ex \
         && ${PIP_INSTALL} pymongo
 
 RUN set -ex \
-        && ${PIP_INSTALL} image
-
-RUN set -ex \
         && ${PIP_INSTALL} python-telegram-handler
+
+# NOTE Pillow’s basic features. Zlib and libjpeg are required by default. Other are optional.
+RUN set -ex \
+        && apk add --no-cache --virtual .build_pillow_deps \
+		libjpeg \
+		zlib \
+		tiff \
+		openjpeg \
+		libwebp \
+		freetype \
+        && ${PIP_INSTALL} pillow
 
 ENTRYPOINT ["/bin/sh"]
