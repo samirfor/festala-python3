@@ -27,8 +27,10 @@ RUN set -ex \
 # NOTE Pillow’s basic features. Zlib and libjpeg are required by default. Other are optional.
 RUN set -ex \
         && apk add --no-cache --virtual .build_pillow_deps \
-		libjpeg \
+		libjpeg-turbo \
+		libjpeg-turbo-dev \
 		zlib \
+		zlib-dev \
 		tiff \
 		openjpeg \
 		libwebp \
