@@ -32,9 +32,13 @@ RUN set -ex \
 		zlib \
 		zlib-dev \
 		tiff \
+		tiff-dev \
 		openjpeg \
+		openjpeg-dev \
 		libwebp \
+		libwebp-dev \
 		freetype \
+		freetype-dev \
         && ${PIP_INSTALL} pillow
 
 ENTRYPOINT ["/bin/sh"]
