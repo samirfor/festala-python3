@@ -41,4 +41,7 @@ RUN set -ex \
 		freetype-dev \
         && ${PIP_INSTALL} pillow
 
+RUN set -ex \
+        && ${PIP_INSTALL} googlemaps
+
 ENTRYPOINT ["/bin/sh"]
