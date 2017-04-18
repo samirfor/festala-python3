@@ -12,13 +12,19 @@ RUN set -ex \
                 libxml2 \
                 libxslt
 
-RUN set -ex \
-        && ${PIP_INSTALL} python-telegram-handler pymongo image
-
 ENV SCRAPY_VERSION="1.3.3"
 
 RUN set -ex \
         && ${PIP_INSTALL} scrapy==${SCRAPY_VERSION} \
         && apk del .build_scrapy_deps
+
+RUN set -ex \
+        && ${PIP_INSTALL} pymongo
+
+RUN set -ex \
+        && ${PIP_INSTALL} image
+
+RUN set -ex \
+        && ${PIP_INSTALL} python-telegram-handler
 
 ENTRYPOINT ["/bin/sh"]
