@@ -44,4 +44,7 @@ RUN set -ex \
 RUN set -ex \
         && ${PIP_INSTALL} googlemaps
 
+RUN set -ex \
+        && ${PIP_INSTALL} python-dateutil
+
 ENTRYPOINT ["/bin/sh"]
