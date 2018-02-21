@@ -45,6 +45,6 @@ RUN set -ex \
         && ${PIP_INSTALL} googlemaps
 
 RUN set -ex \
-        && ${PIP_INSTALL} python-dateutil
+        && ${PIP_INSTALL} python-dateutil dateparser
 
 ENTRYPOINT ["/bin/sh"]
